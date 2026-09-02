@@ -1,0 +1,364 @@
+    /* Global rule */
+    *{box-sizing: border-box}
+    body{
+        height: 100vh;
+    font-family: "Bai Jamjuree"; 
+    font-size: 1.125rem;
+    margin: 0;
+    }
+    .container{
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    }
+    :root{
+        --primary-bt-mac: hsl(233, 100%, 69%);
+        --primary-bt-ios: hsl(171, 66%, 44%);
+        --bx-sh: rgba(109, 98, 98, 0.349);
+        --bx-sh-mac: hsl(233, 88%, 54%);
+        --bx-sh-ios: hsl(171, 58%, 37%);
+        --h1-color:  hsl(210, 10%, 33%);
+        --p-color: hsl(201, 11%, 66%);
+    }
+    h1,h2,h3{
+      text-align: center;
+    color: var(--h1-color);
+    }
+    p{
+      text-align: center;
+        line-height: 1.7;
+        color: var(--p-color);
+    }
+     /* Button */
+      .button{
+        display: flex;
+        gap: 0.75rem;
+        padding: 0.625rem;
+        transform: translatey(1.25rem);
+      }
+     .button .ios,.button .mac{
+       padding: 0.75rem 1.25rem;
+        border-radius: 24px;
+        border: 0;
+        font-family:  "Bai Jamjuree";
+        font-weight: 400;
+        transition: 0.3s;
+        filter: brightness(1);
+        color: white;
+    }
+    .ios{
+        box-shadow: inset 0 -3px 0 var(--bx-sh-ios),
+        0 8px 10px 0 var(--bx-sh);
+        background-color: var(--primary-bt-ios);
+    }
+    .ios:hover{
+        filter: brightness(1.1);
+        cursor: pointer;
+    }
+      .mac{
+        box-shadow: inset 0 -3px 0 var(--bx-sh-mac),
+        0 8px 10px 0 var(--bx-sh);
+        background-color: var(--primary-bt-mac);
+    }
+     .mac:hover{
+       filter: brightness(1.1);
+        cursor: pointer;
+    }
+    @media (max-width: 375px) {
+            .button{
+                display: flex;
+            flex-direction: column;
+            }
+    }
+    /* Button */
+    /* Global rule */
+/*=====================================================================*/
+    /* Start-Header */
+    header{
+        background-image: url(../images/bg-header-desktop.png);
+        background-repeat: no-repeat;
+        background-size: 100% 400px;
+    }
+     header .container{
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-end;
+     align-items: center;
+    }
+    .copy{
+        padding-top: 8.75rem;
+    }
+       /* text-content */
+    header h1{
+        padding-top: 3.75rem;
+        font-weight: 600;
+    }
+    header p{
+        width:  523px;
+        margin: 4px;
+        font-size: 15px;
+    }
+      /* text-content */
+
+     
+
+        @media  (max-width: 375px){
+          header .container{
+        width: 100%;
+            }
+            header h1 span{
+                display: block;
+            }
+            header h1{
+            font-size: 2rem;
+            }
+            header p{
+                width: 30ch;
+                line-height: 1.7;
+            }
+        
+        }
+    /* End-Header */
+/* ======================================================================= */
+      /*Start Section-1 */
+      /* title */
+    .section-1 .container-title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 12.5rem;
+        padding-bottom: 3.125rem;
+    }
+    .section-1 .container-title p{
+       width: 46%;
+    }
+    @media (max-width: 375px) {
+
+        .section-1 h2{
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+    }
+    /* ------------------------------------------------------------------- */
+      /* content */
+      .section-1 .container-content{
+        display: flex;
+        justify-content: flex-start;
+        gap: 5rem;
+        flex-wrap: wrap;
+      }
+      .section-1 .container-content p{
+        width: 70%;
+        text-align: left;
+        text-wrap: pretty;
+      }
+      .section-1 .container-content .info-mac-screen{
+        padding-top: 7.5rem;
+      }
+      .section-1 .container-content .screen{
+        position: relative;
+        left: 3.125rem;
+      }
+
+    @media (max-width: 375px) {
+        
+      .section-1 .container-content .screen{
+     position: relative;
+     left: 1.75rem;
+     width: calc(100% - 3.75rem);
+      }
+      .info-mac-screen{
+        width: 100%;
+      }
+     .section-1 .container-content .info-mac-screen{
+        padding-top: 0;
+    
+      }
+     .section-1 .container-content p{
+        width: 80%;
+        
+        margin: 0 auto;
+      }
+    }
+      /*End Section-1 */
+
+       /*Start Section-2 */
+       .section-2 .container{
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+        padding-top: 6.25rem;
+       }
+       .section-2 .container p{
+        width: 80%;
+     margin: 0 auto;
+        padding-bottom: 3.125rem;
+       }
+
+       @media (max-width: 375px) {
+        .section-2 .devices {
+            width: calc(100% - 2rem);
+        margin: 0 auto;
+        }
+       }
+       /*End Section-2 */
+/* -------------------------------------------------------------------- */
+       /*Start section-3 */
+       .section-3 .container{
+        padding-top: 3.125rem;
+         display: grid;
+         gap: 10px;
+         grid-template-columns: repeat(5, 1fr);
+         grid-template-areas: " . work work work . "  "list list plain preview preview" "google ibm mic hp vector ";
+         text-align: center;
+       }
+       .blacklist,.text-plain,.preview{
+        padding-bottom: 6.25rem;
+        width: 400px;
+       }
+       .title-workflow{
+        grid-column: 2 / 5;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 3.125rem;
+       }
+       .blacklist{
+     grid-area: list;
+     
+       }
+       .text-plain{
+     grid-area: plain;
+     
+       }
+       .preview{
+     grid-area: preview;
+     
+       }
+        .google{
+    grid-area: google;
+        }
+       .ibm{
+    grid-area: ibm;
+       }
+       .hp{
+    grid-area: hp;
+       }
+       .microsoft{
+        grid-area: mic;
+       }
+       .vector{
+    grid-area: vector;
+       }
+       @media (max-width: 375px) {
+        .section-3 .container{
+            grid-template-columns: 1fr;
+            grid-template-areas: "work " "list " "plain " "preview " " google "
+            " ibm" " mic" " hp" "vector";
+            justify-content: center;
+        }
+    .section-3 .title-workflow{
+        grid-column: 1 / 2;
+      }
+     .section-3 .google,.section-3 .hp,
+     .section-3 .ibm,.section-3 .microsoft,
+     .section-3 .vector{
+        justify-self: center;
+        padding-bottom: 3.125rem;
+      }
+     .section-3 p,.section-3 h2{
+    line-height: 1.7;
+    width: 80%;
+    margin: 0 auto;
+      }
+    }
+       /*End Section-3 */
+
+      /* Start Section-4 */
+      .section-4 .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 6.25rem;
+        text-align: center;
+      }
+      .section-4 p{
+        width: 50%;
+      }
+      @media (max-width: 375px) {
+        
+        .section-4 p{
+            width: 80%;
+        }
+      }
+      /* End Section-4 */
+
+      /* Start Footer */
+      footer{
+        
+        margin-top: 6.25rem;
+        background-color: #eee;
+    }
+      footer .container{
+        padding: 3.125rem 0.625rem 0.625rem;
+        display: flex;
+        align-items: center;
+      }
+      footer ul{
+        list-style: none;
+      }
+      footer li{
+        padding: 0;
+        margin: 0;
+        color: var(--h1-color);
+      }
+    footer  .logo-brand{
+        flex-grow: 1;
+      }
+      footer .logo{
+        width: 3.125rem;
+        height: 3.125rem;
+      }
+     footer .privacy ul{
+        display: flex;
+        width: 80%;
+      flex-wrap: wrap;
+      column-gap: 2.5rem;
+      row-gap: 1.25rem;
+      flex-grow: 1;
+      }
+    footer  .contact{
+        flex-grow: 1;
+      }
+    footer  .contact li:first-child{
+    padding-bottom: 1.25rem;
+      }
+    footer  .social-icon{
+        flex-grow: 3;
+      }
+     footer .social-icon ul{
+        display: flex;
+        justify-content: flex-end;
+        gap: 20px;
+      }
+      @media (max-width: 375px) {
+        footer .container{
+      flex-direction: column;
+      flex-wrap: nowrap;
+      text-align: center;
+        }
+       footer .privacy ul{
+          width: 100%;
+          flex-direction: column;
+        }
+        footer .logo{
+          margin-left: 2rem;
+        }
+      footer  .privacy ul li:nth-child(2){
+          order: 3;
+        }
+      }
+      /* End Footer */
+
+    
